@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    >
+    <TextView
+        android:id="@+id/TextAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="16dp"
+        android:text="@string/about"
+        />
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="@color/colorAccent"
+        android:onClick="dismiss"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_below="@+id/TextAbout"
+        android:layout_alignRight="@+id/TextAbout"
+        android:layout_alignEnd="@+id/TextAbout"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>
