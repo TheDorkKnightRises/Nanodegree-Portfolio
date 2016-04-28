@@ -1,12 +1,13 @@
 package thedorkknightrises.portfolio;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -46,5 +47,18 @@ public class MainActivity extends AppCompatActivity {
     public void onBtnClick(View view) {
         Button button= (Button) view;
         Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+    }
+
+    public void onBtn1Click(View view) {
+
+        PackageManager pm = getPackageManager();
+        try {
+            String packageName = "thedorkknightrises.moviespop";
+            Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
+            startActivity(launchIntent);
+        } catch (Exception e1) {
+            Button button= (Button) view;
+            Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 }
