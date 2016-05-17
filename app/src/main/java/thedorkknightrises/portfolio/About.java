@@ -1,12 +1,10 @@
 package thedorkknightrises.portfolio;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.content.res.Resources;
-import android.widget.TextView;
 
-public class About extends Activity{
+public class About extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState)
     {

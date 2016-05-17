@@ -25,7 +25,7 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:onClick="onBtn1Click"/>
+        android:onClick="onBtnClick"/>
 
     <Button
         style="@style/Button"

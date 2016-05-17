@@ -46,19 +46,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnClick(View view) {
         Button button= (Button) view;
-        Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
-    }
-
-    public void onBtn1Click(View view) {
-
-        PackageManager pm = getPackageManager();
-        try {
-            String packageName = "thedorkknightrises.moviespop";
-            Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
-            startActivity(launchIntent);
-        } catch (Exception e1) {
-            Button button= (Button) view;
-            Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+        if (view==findViewById(R.id.btn1))
+        {
+            PackageManager pm = getPackageManager();
+            try {
+                String packageName = "thedorkknightrises.moviespop";
+                Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
+                startActivity(launchIntent);
+            } catch (Exception e1) {
+                Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
         }
+        else if (view==findViewById(R.id.btn2))
+        {
+            PackageManager pm = getPackageManager();
+            try {
+                String packageName = "thedorkknightrises.stockhawk";
+                Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
+                startActivity(launchIntent);
+            } catch (Exception e1) {
+                Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        }
+        else
+        Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
     }
 }
