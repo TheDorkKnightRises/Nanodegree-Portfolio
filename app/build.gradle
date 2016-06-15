@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "thedorkknightrises.portfolio"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
+        versionCode 3
         versionName "1.2"
     }
     buildTypes {
