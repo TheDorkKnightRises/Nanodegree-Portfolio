@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnClick(View view) {
-        Button button= (Button) view;
-        if (view==findViewById(R.id.btn1))
+        if (view==findViewById(R.id.btn1)||view==findViewById(R.id.btnt1))
         {
             PackageManager pm = getPackageManager();
             try {
@@ -54,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
                 startActivity(launchIntent);
             } catch (Exception e1) {
-                Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "App not installed!", Toast.LENGTH_SHORT).show();
             }
         }
-        else if (view==findViewById(R.id.btn2))
+        else if (view==findViewById(R.id.btn2)||view==findViewById(R.id.btnt2))
         {
             PackageManager pm = getPackageManager();
             try {
@@ -65,10 +63,27 @@ public class MainActivity extends AppCompatActivity {
                 Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
                 startActivity(launchIntent);
             } catch (Exception e1) {
-                Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "App not installed!", Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if (view==findViewById(R.id.btn3)||view==findViewById(R.id.btnt3))
+        {
+            PackageManager pm = getPackageManager();
+            try {
+                String packageName = "thedorkknightrises.jokesapp.donate";
+                Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
+                startActivity(launchIntent);
+            } catch (Exception e1) {
+                try {
+                    String packageName = "thedorkknightrises.jokesapp.free";
+                    Intent launchIntent = pm.getLaunchIntentForPackage(packageName);
+                    startActivity(launchIntent);
+                } catch (Exception e2) {
+                    Toast.makeText(MainActivity.this, "App not installed!", Toast.LENGTH_SHORT).show();
+                }
             }
         }
         else
-        Toast.makeText(MainActivity.this, "This button will launch "+button.getText().toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "App not installed!", Toast.LENGTH_SHORT).show();
     }
 }

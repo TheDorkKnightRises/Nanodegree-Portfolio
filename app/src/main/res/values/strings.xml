@@ -3,11 +3,17 @@
     <string name="action_about">About</string>
     <string name="text">My Nanodegree Apps</string>
     <string name="btn1">Popular Movies</string>
+    <string name="desc1">Popular Movie suggestion app developed as part of the Udacity Android Developer Nanodegree programme\nhttps://github.com/TheDorkKnightRises/Popular-Movies</string>
     <string name="btn2">Stock Hawk</string>
-    <string name="btn3">Library</string>
-    <string name="btn4">Build It Bigger</string>
-    <string name="btn5">XYZ Reader</string>
+    <string name="desc2">An app for tracking the prices of stocks over time. Developed as part of the Android Developer Nanodegree\nhttps://github.com/TheDorkKnightRises/StockHawk</string>
+    <string name="btn3">Jokes App</string>
+    <string name="desc3">A joke-telling app with multiple flavors that uses multiple libraries and Google Cloud Endpoints as different modules\nhttps://github.com/TheDorkKnightRises/Jokes-App</string>
+    <string name="btn4">XYZ Reader</string>
+    <string name="desc4">Coming soon…</string>
+    <string name="btn5">Go Ubiquitous</string>
+    <string name="desc5">Coming soon…</string>
     <string name="btn6">Capstone</string>
+    <string name="desc6">Coming soon…</string>
     <string name="about">App Portfolio for Android Developer Nanodegree by Samriddha Basu</string>
     <string name="close">Close</string>
 </resources>
